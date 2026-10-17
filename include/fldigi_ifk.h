@@ -101,6 +101,10 @@ int fifk_rx_quality(const fifk_rx *rx);     /* THOR FEC confidence 0..100 (decod
  * +- tonespacing/2. Not in fldigi (no AFC for these modes): an estimate for display. */
 double fifk_rx_offset_hz(const fifk_rx *rx);
 size_t fifk_rx_dropped(const fifk_rx *rx);
+/* Diagnostics: the IFK+ nibbles (tone step - 2, mod 18, 0..17) of the symbols decided
+ * since the last call, oldest first, at most the last 256. Returns how many were copied
+ * to out (at most max). Not in fldigi; for tests and symbol displays. */
+size_t fifk_rx_take_nibbles(fifk_rx *rx, int *out, size_t max);
 
 /* ------------------------------------------------------------------------------------
  * Transmitter: thor::tx_process (thor.cxx:1313-1393) / dominoex::tx_process

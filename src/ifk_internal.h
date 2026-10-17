@@ -80,6 +80,9 @@ struct fifk_rx {
     unsigned char symbolbuf[DOM_MAX_VARICODE_LEN];
     int dsymcounter;
     int outofrange;
+    /* diagnostics: decided IFK+ nibbles (ring) */
+    int nibbles[256];
+    size_t nib_head, nib_count;
     /* offset estimate */
     double offset;
     int offset_valid;

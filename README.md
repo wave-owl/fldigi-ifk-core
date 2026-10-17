@@ -155,6 +155,7 @@ All declarations are in `include/fldigi_ifk.h`.
 | `fifk_rx *fifk_rx_create(const fifk_rx_config *)` | `submode`, `carrier_hz` (audio centre, 1500), `fast_paths` (0: fldigi's 3 paths), `dominoex_fec`, `squelch` (0 off, else the 0..100 metric threshold). NULL for an unknown submode or a carrier that puts the signal outside 0 .. rate/2. |
 | `size_t fifk_rx_process(rx, x, n, primary, max_p, secondary, max_s, &n_s)` | Feed samples; returns the primary bytes (fldigi's `put_rx_char`, NUL included), secondary bytes in the second buffer. Overflow is dropped and counted (`fifk_rx_dropped`). |
 | `fifk_rx_snr_db`, `fifk_rx_metric`, `fifk_rx_quality`, `fifk_rx_offset_hz` | fldigi's s/n estimate and squelch metric, THOR's FEC confidence (0..100), and an offset estimate (not in fldigi) of the signal from the carrier within +- half a tone spacing. |
+| `fifk_rx_take_nibbles(rx, out, max)` | Diagnostics (not in fldigi): the IFK+ nibbles (tone step - 2, mod 18) of the symbols decided since the last call, at most the last 256. |
 | `fifk_rx_reset`, `fifk_rx_destroy` | |
 | `fifk_tx *fifk_tx_create(const fifk_tx_config *)` | `submode`, `carrier_hz`, `dominoex_fec`, `secondary_text` (NULL: fldigi's `"fldigi 4.2.13 "`), `no_soft_edges`, `risetime_ms` (< 0: 4 ms). |
 | `size_t fifk_tx_bound(tx)` | The most samples one of the four calls below can produce; give every call a buffer at least that large. |

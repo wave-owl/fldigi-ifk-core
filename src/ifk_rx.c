@@ -56,6 +56,16 @@ static void put_secondary(fifk_rx *rx, int c)
         rx->dropped++;
 }
 
+static void note_nibble(fifk_rx *rx, int c)
+{
+    /* diagnostics only (fifk_rx_take_nibbles) */
+    rx->nibbles[(rx->nib_head + rx->nib_count) % 256] = c;
+    if (rx->nib_count < 256)
+        rx->nib_count++;
+    else
+        rx->nib_head = (rx->nib_head + 1) % 256;
+}
+
 static int squelched(const fifk_rx *rx)
 {
     /* progStatus.sqlonoff && metric < progStatus.sldrSquelchValue */
@@ -208,6 +218,7 @@ static void thor_softdecodesymbol(fifk_rx *rx)
     c -= 2;
     if (c < 0)
         c += IFK_NUMTONES;
+    note_nibble(rx, c);
 
     period = rx->paths * rx->m->doublespaced;
     rawdoppler = (rx->currsymbol - rx->prev1symbol) % period;
@@ -472,6 +483,7 @@ static void dom_decodesymbol(fifk_rx *rx)
     c = (int)floor(fdiff + .5) - 2;
     if (c < 0)
         c += IFK_NUMTONES;
+    note_nibble(rx, c);
     dom_decode_domino(rx, c);
     dom_decode_mupsk_ex(rx, c);
 }
@@ -799,4 +811,17 @@ double fifk_rx_offset_hz(const fifk_rx *rx)
 size_t fifk_rx_dropped(const fifk_rx *rx)
 {
     return rx ? rx->dropped : 0;
+}
+
+size_t fifk_rx_take_nibbles(fifk_rx *rx, int *out, size_t max)
+{
+    size_t n = 0;
+    if (!rx || !out)
+        return 0;
+    while (n < max && rx->nib_count > 0) {
+        out[n++] = rx->nibbles[rx->nib_head];
+        rx->nib_head = (rx->nib_head + 1) % 256;
+        rx->nib_count--;
+    }
+    return n;
 }
