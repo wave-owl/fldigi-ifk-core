@@ -1,0 +1,435 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "7561d461b00ff11d",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "d01ca29bef124e0a8d66e9218953dfe8639cdcae"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "b7d316c4b006e55ed66569cf8daa75a663aa0189c7816ee9acbbb2719f03830a"
+        }
+      ],
+      "name": "/Users/gerolfziegenhain/src/wave-owl/local/sbom-core-preflight-v2/fldigi-ifk-core/.source-input/.github/workflows/ci.yml",
+      "type": "file"
+    },
+    {
+      "bom-ref": "9c8a102daa0da910",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "bf8cc6a6368c6fb5a48d180f81588dd8b79a1774"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "0a5a07a517c90bf8316c97c55c5662c8cb2175ea3f8d1a63b9c424a69a4b6d3b"
+        }
+      ],
+      "name": "/Users/gerolfziegenhain/src/wave-owl/local/sbom-core-preflight-v2/fldigi-ifk-core/.source-input/dsp/.github/workflows/ci.yml",
+      "type": "file"
+    },
+    {
+      "bom-ref": "git:https://github.com/wave-owl/fldigi-dsp-core@c6f5a9bc3463db9995e413cafd1aef3198c7cdf6",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi-dsp-core/tree/c6f5a9bc3463db9995e413cafd1aef3198c7cdf6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/fldigi-dsp-core",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "gitlink"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "c6f5a9bc3463db9995e413cafd1aef3198c7cdf6"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "e1c00fb90cb6a832f1ba61c68b8e098cb5e83a3e"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/fldigi-dsp-core"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        }
+      ],
+      "type": "library",
+      "version": "c6f5a9bc3463db9995e413cafd1aef3198c7cdf6"
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v4?package-id=33a8b75b56e25f47",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*",
+      "name": "actions/checkout",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/dsp/.github/workflows/ci.yml"
+        }
+      ],
+      "purl": "pkg:github/actions/checkout@v4",
+      "type": "library",
+      "version": "v4"
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v4:*:*:*:*:*:*:*",
+      "name": "actions/checkout",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/ci.yml"
+        }
+      ],
+      "purl": "pkg:github/actions/checkout@v4",
+      "type": "library",
+      "version": "v4"
+    },
+    {
+      "bom-ref": "vendored:src/ifk_common.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi/tree/e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ifk_common.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"04116d48e6a51e0f85f6e347065484656460c26d74cdfb00a6b9b1826592aa98\"}, {\"path\": \"src/ifk_common.c\", \"sha256\": \"4c686ab88e5a8a816b824fe1e8ac6917bba45480e45d5c6e7d506592ea9e5957\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+    },
+    {
+      "bom-ref": "vendored:src/ifk_rx.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi/tree/e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ifk_rx.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"04116d48e6a51e0f85f6e347065484656460c26d74cdfb00a6b9b1826592aa98\"}, {\"path\": \"src/ifk_rx.c\", \"sha256\": \"683b6b8d3e9ce096e2193d780719a42be1353d67c8a63803a9d12b455f8b78dd\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+    },
+    {
+      "bom-ref": "vendored:src/ifk_tables.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi/tree/e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ifk_tables.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"04116d48e6a51e0f85f6e347065484656460c26d74cdfb00a6b9b1826592aa98\"}, {\"path\": \"src/ifk_tables.c\", \"sha256\": \"32c6d5b11c2b9d18b16884f9e0d1a4379d66942f7b7c3f640f83ac61117788a7\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+    },
+    {
+      "bom-ref": "vendored:src/ifk_tx.c",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi/tree/e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "src/ifk_tx.c",
+      "properties": [
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        },
+        {
+          "name": "sbom:role",
+          "value": "declared-vendored-source"
+        },
+        {
+          "name": "sbom:source-manifest",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}, {\"path\": \"README.md\", \"sha256\": \"04116d48e6a51e0f85f6e347065484656460c26d74cdfb00a6b9b1826592aa98\"}, {\"path\": \"src/ifk_tx.c\", \"sha256\": \"ac5f3d397d3af59f665e0d051a7734a86f8468bd91b8beee9ffcef3af356942c\"}]"
+        },
+        {
+          "name": "sbom:provenance-verification",
+          "value": "declared origin; local blob hashes do not establish upstream equivalence"
+        }
+      ],
+      "type": "library",
+      "version": "e7c3ab3709ad62a7d91829364eb48a05fa325c0d"
+    }
+  ],
+  "compositions": [
+    {
+      "aggregate": "unknown",
+      "assemblies": [
+        "git:https://github.com/wave-owl/fldigi-ifk-core@748af7961f86fd2fe39e1838e3ffd55f05a621a1"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [],
+      "ref": "7561d461b00ff11d"
+    },
+    {
+      "dependsOn": [],
+      "ref": "9c8a102daa0da910"
+    },
+    {
+      "dependsOn": [],
+      "ref": "git:https://github.com/wave-owl/fldigi-dsp-core@c6f5a9bc3463db9995e413cafd1aef3198c7cdf6"
+    },
+    {
+      "dependsOn": [
+        "7561d461b00ff11d",
+        "9c8a102daa0da910",
+        "git:https://github.com/wave-owl/fldigi-dsp-core@c6f5a9bc3463db9995e413cafd1aef3198c7cdf6",
+        "pkg:github/actions/checkout@v4?package-id=33a8b75b56e25f47",
+        "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3",
+        "vendored:src/ifk_common.c",
+        "vendored:src/ifk_rx.c",
+        "vendored:src/ifk_tables.c",
+        "vendored:src/ifk_tx.c"
+      ],
+      "ref": "git:https://github.com/wave-owl/fldigi-ifk-core@748af7961f86fd2fe39e1838e3ffd55f05a621a1"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:github/actions/checkout@v4?package-id=33a8b75b56e25f47"
+    },
+    {
+      "dependsOn": [],
+      "ref": "pkg:github/actions/checkout@v4?package-id=fa2e67b8c20f75f3"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ifk_common.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ifk_rx.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ifk_tables.c"
+    },
+    {
+      "dependsOn": [],
+      "ref": "vendored:src/ifk_tx.c"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "git:https://github.com/wave-owl/fldigi-ifk-core@748af7961f86fd2fe39e1838e3ffd55f05a621a1",
+      "externalReferences": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/wave-owl/fldigi-ifk-core/tree/748af7961f86fd2fe39e1838e3ffd55f05a621a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "License evidence; see declared files"
+          }
+        }
+      ],
+      "name": "wave-owl/fldigi-ifk-core",
+      "properties": [
+        {
+          "name": "sbom:role",
+          "value": "source-root"
+        },
+        {
+          "name": "sbom:git-commit",
+          "value": "748af7961f86fd2fe39e1838e3ffd55f05a621a1"
+        },
+        {
+          "name": "sbom:git-tree",
+          "value": "7b639534313f93926af8b90316687dbdcc6bd6f6"
+        },
+        {
+          "name": "sbom:source-repository",
+          "value": "https://github.com/wave-owl/fldigi-ifk-core"
+        },
+        {
+          "name": "sbom:release-tags",
+          "value": "[\"v0.1.0\"]"
+        },
+        {
+          "name": "sbom:license-evidence",
+          "value": "[{\"path\": \"LICENSE\", \"sha256\": \"3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986\"}]"
+        },
+        {
+          "name": "sbom:license-resolution",
+          "value": "unresolved; manual review required"
+        }
+      ],
+      "type": "application",
+      "version": "748af7961f86fd2fe39e1838e3ffd55f05a621a1"
+    },
+    "properties": [
+      {
+        "name": "sbom:scope",
+        "value": "Source repository inventory only; completeness is UNKNOWN. Syft inventories tracked source/package manifests. Gitlinks and declared vendored/model evidence are inspected at immutable pins. CMake declarations are conditional requirements, not resolved installations. This is NOT proof of operating-system packages, static-link closure, build-time resolution, or the contents of release binaries."
+      },
+      {
+        "name": "sbom:generation-status",
+        "value": "success"
+      },
+      {
+        "name": "sbom:generation-errors",
+        "value": "[]"
+      }
+    ],
+    "timestamp": "2026-11-02T16:49:43.555789+00:00",
+    "tools": {
+      "components": [
+        {
+          "author": "anchore",
+          "name": "syft",
+          "type": "application",
+          "version": "1.55.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:f5d4e53c-46ed-40e5-a800-70814b8f14a9",
+  "specVersion": "1.6",
+  "version": 1
+}
